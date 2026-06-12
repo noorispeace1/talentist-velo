@@ -30,6 +30,7 @@ export default function Navbar() {
       label: "Pricing",
       href: "/plans",
     },
+    
   ];
 const DashboardLinks ={
   seeker:'/dashboard/seeker',

@@ -6,7 +6,7 @@ import JobListingContainer from "../dashboard/jobs/JobListingContainer";
 export default async function Page() {
   // Fetched server-side on the initial request
   const jobs = await getJobs();
- 
+ console.log(jobs);
   return (
     <div className="w-full min-h-screen bg-zinc-950 p-6 md:p-12 text-white">
       <div className="max-w-7xl mx-auto mb-10">
