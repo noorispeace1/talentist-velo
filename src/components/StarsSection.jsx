@@ -54,14 +54,39 @@ export default function StatsSection() {
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-7xl px-6">
                 {/* Heading */}
-                <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="text-2xl font-medium leading-relaxed text-white/90">
+                <div className="mx-auto max-w-3xl text-center relative">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
                         Assisting over 15,000 job seekers
                         <br />
                         find their dream positions.
                     </h2>
-                    <motion.p animate={{ rotate: -45 }}>Remote Jobs</motion.p>
-                    <motion.p initial={{ scale: 0 }} animate={{ scale: 1 }}>On-site Jobs</motion.p>
+                    
+                    <div className="flex flex-wrap justify-center gap-4 mt-8">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="px-6 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium backdrop-blur-sm shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+                        >
+                            🌍 Remote Jobs
+                        </motion.div>
+                        <motion.div 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                            className="px-6 py-2 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-sm font-medium backdrop-blur-sm shadow-[0_0_15px_rgba(139,92,246,0.15)]"
+                        >
+                            🏢 On-site Jobs
+                        </motion.div>
+                        <motion.div 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.6 }}
+                            className="px-6 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium backdrop-blur-sm shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+                        >
+                            ⚡ Hybrid Roles
+                        </motion.div>
+                    </div>
                 </div>
 
                 {/* Stats Cards */}

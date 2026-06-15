@@ -83,7 +83,7 @@ const CompanyTable = ({ companies }) => {
                             </Table.Column>
                         </Table.Header>
                         <Table.Body>
-                            {companies.map((company) => {
+                            {companies?.map((company) => {
                                 const companyId = company._id?.$oid || company._id;
                                 const statusInfo = getStatusDetails(company.status);
 

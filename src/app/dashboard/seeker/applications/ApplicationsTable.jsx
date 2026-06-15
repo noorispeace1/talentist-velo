@@ -79,15 +79,8 @@ const ApplicationsTable = ({ jobs }) => {
       </h2>
 
       <Table 
-        className="w-full"
-        classNames={{
-          base: "bg-transparent",
-          table: "border-collapse",
-          thead: "[&>tr]:border-b [&>tr]:border-zinc-800/60",
-          th: "bg-transparent text-zinc-400 font-medium text-sm py-4 border-b border-zinc-800/60 first:pl-4 last:pr-4",
-          tr: "border-b border-zinc-800/40 hover:bg-zinc-900/40 transition-colors last:border-none",
-          td: "py-4 align-middle first:pl-4 last:pr-4 text-zinc-300 text-sm"
-        }}
+        className="w-full bg-transparent border-collapse [&_th]:bg-transparent [&_th]:text-zinc-400 [&_th]:border-b [&_th]:border-zinc-800/60 [&_tr]:border-b [&_tr]:border-zinc-800/40 hover:[&_tr]:bg-zinc-900/40 [&_td]:py-4 [&_th]:py-4"
+        removeWrapper
       >
         <Table.ScrollContainer>
           <Table.Content aria-label="Job applications tracking table">

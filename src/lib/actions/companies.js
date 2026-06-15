@@ -2,13 +2,15 @@
 
 import { revalidatePath } from "next/cache";
 import { serverMutation } from "../core/server";
+import { requireRole } from "../core/session";
 
 export const createCompany = async (newCompanyData) => {
     return serverMutation('/api/companies', newCompanyData);
 }
 
 export const updateCompany = async (id, data) => {
-    const result = serverMutation(`/api/companies/${id}`, data, 'PATCH');
+    await requireRole('admin');
+    const result = await serverMutation(`/api/companies/${id}`, data, 'PATCH');
     revalidatePath('/dashboard/admin/companies');
     return result;
 }
