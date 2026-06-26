@@ -12,6 +12,12 @@ export default function HowItWorks() {
       description: "Sign up as a Job Seeker or Recruiter and set up your professional profile in minutes.",
       icon: <User className="w-10 h-10 text-emerald-400" />
     },
+
+
+
+
+
+    
     {
       id: 2,
       title: "Discover or Post Jobs",
